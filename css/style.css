@@ -1,13 +1,20 @@
 /* font-family: 'Oleo Script', cursive;
 font-family: 'Raleway', sans-serif; */
 
+* {
+  outline: 1px solid tomato;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   color: var(--basic-textcolor);
 }
+
+/* reset style for tags and base classes*/
 
 body h1,
 body h2,
@@ -35,8 +42,49 @@ address {
   text-decoration: none;
 }
 
-/* Style Logo for header and for footer */
+/* Style base container */
+
+.container {
+  /* size and indents */
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* style section base */
+.base-title {
+  font-weight: 700;
+  color: var(--basic-hcolor);
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  color: var(--basic-hcolor);
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.text {
+  line-height: 1.71;
+}
+/* Style for header and for footer */
+
+.header .container {
+  /* position inner elements */
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+}
+
 .logo {
+  /* margin-left: auto; */
+  margin-right: 93px;
+}
+
+.logo .link {
   font-family: 'Raleway', sans-serif;
   color: var(--accent-color);
   font-weight: 700;
@@ -52,19 +100,35 @@ address {
   color: var(--logofooter-second-color);
 }
 
-.header {
-  border-bottom: 1px solid #ececec;
+/* style header and nav-menu and contact-info*/
+
+.nav-menu {
+  display: flex;
+  align-items: center;
 }
 
-/* style header and nav-menu and contact-info*/
+.nav-menu .listitem:not(:first-child) {
+  margin-left: 50px;
+}
+
 .menu .link {
+  display: inline-block;
   color: var(--basic-hcolor);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.filter-btn {
+.header .listinfo {
+  display: flex;
+  margin-left: auto;
+}
+
+.header .listinfo .listitem:not(:last-child) {
+  margin-right: 50px;
+}
+
+.lstinfo .filter-btn {
   padding: 0;
   border-style: none;
   height: 38px;
@@ -108,7 +172,18 @@ address {
 
 /* style main section
 section Hero */
+
+.main-box {
+  background-color: var(--accent-bgcolor);
+}
+
+.hero.container {
+  padding: 200px 0;
+}
+
 .tagline {
+  display: block;
+  margin-bottom: 30px;
   color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
@@ -118,51 +193,65 @@ section Hero */
   text-transform: uppercase;
 }
 
-.main-box {
-  background-color: var(--accent-bgcolor);
-}
-
 .btn-order {
-  padding: 0;
+  display: block;
+  padding: 10px 32px;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.86;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  width: 200px;
+  /* width: 200px;
   height: 50px;
   left: 700px;
-  top: 430px;
+  top: 430px; */
   background: var(--accent-color);
   color: var(--white-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-style: none;
 }
 
-/* style section base */
-.base-title {
-  font-weight: 700;
-  color: var(--basic-hcolor);
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+/* style section feuture */
+
+.features .container,
+.ourteam .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.title {
-  font-weight: 700;
-  color: var(--basic-hcolor);
-  line-height: 1.14;
-  text-transform: uppercase;
+.features .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.ourteam .title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  /* identical to box height */
-  text-transform: capitalize;
+.nonevisible {
+  display: none;
+}
+
+.features .title {
+  margin-bottom: 10px;
+}
+
+.features .listitem {
+  width: 270px;
+}
+
+/* style section portfolio */
+
+.portfolio .container {
+  padding-bottom: 94px;
+}
+
+.portfolio .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio .base-title {
+  margin-bottom: 50px;
 }
 
 .portfolio .title {
@@ -174,19 +263,48 @@ section Hero */
   text-transform: capitalize;
 }
 
-.text {
-  line-height: 1.71;
-}
-
-.ourteam .text {
-  font-size: 16px;
-  line-height: 1.19;
-  text-transform: capitalize;
-}
-
 .portfolio .text {
   font-size: 16px;
   line-height: 1.88;
+  text-transform: capitalize;
+}
+
+/* style section ourteam */
+
+.ourteam .base-title {
+  margin-bottom: 50px;
+}
+
+.ourteam .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ourteam .listitem {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.ourteam .image {
+  display: block;
+  padding-bottom: 30px;
+}
+
+.ourteam .title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  /* identical to box height */
+  text-transform: capitalize;
+}
+
+.ourteam .text {
+  display: block;
+  font-size: 16px;
+  line-height: 1.19;
   text-transform: capitalize;
 }
 
@@ -195,8 +313,32 @@ section Hero */
 }
 
 /* style for footer */
-.address-info {
+
+.footer-box .container {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.footer-box .logo {
+  margin-bottom: 20px;
+}
+
+.footer-box .address-info {
+  display: block;
+  margin-bottom: 9px;
   color: var(--white-color);
+}
+
+.footer-box .footer-info {
+  display: inline-block;
+}
+
+.footer-box .listitem {
+  display: block;
+}
+
+.footer-box .listinfo .listitem:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .listitem .footer-info {
