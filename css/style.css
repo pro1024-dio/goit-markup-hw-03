@@ -14,6 +14,12 @@ body {
   color: var(--basic-textcolor);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* reset style for tags and base classes*/
 
 body h1,
@@ -238,7 +244,6 @@ section Hero */
 }
 
 /* style section ourteam */
-
 .ourteam .base-title {
   margin-bottom: 50px;
 }
@@ -250,18 +255,20 @@ section Hero */
 }
 
 .ourteam .listitem {
-  padding-bottom: 30px;
   text-align: center;
+  border-style: hidden;
+  border-width: 1px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: var(--card-shadow);
 }
 
 .ourteam .image {
   display: block;
-  margin-bottom: 30px;
 }
 
 .ourteam .title {
-  display: block;
   margin-bottom: 10px;
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -278,6 +285,11 @@ section Hero */
 .ourteam {
   min-width: var(--width-container);
   background-color: var(--section-bgcolor);
+}
+
+.ourteam-card-content {
+  padding: var(--min-indent);
+  background-color: var(--white-color);
 }
 
 /* style for footer */
@@ -366,40 +378,23 @@ section Hero */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-top: calc(-1 * var(--min-indent));
+  margin-left: calc(-1 * var(--min-indent));
 }
 
 .portfolio-list .listitem {
-  width: 370px;
-  padding-bottom: 20px;
-  border: 1px solid var(--border-cards-color);
-}
-
-.portfolio-list .listitem:first-child {
-  margin-bottom: var(--min-indent);
-  margin-right: var(--min-indent);
-}
-
-.portfolio-list .listitem:nth-child(3n + 3) {
-  margin-bottom: var(--min-indent);
+  flex-basis: calc(100% / 4 - var(--min-indent));
+  margin-top: var(--min-indent);
   margin-left: var(--min-indent);
+  box-shadow: var(--card-shadow);
 }
 
-.portfolio-list .listitem:nth-child(3n + 2) {
-  margin-bottom: var(--min-indent);
-}
-
-.portfolio-list .listitem:nth-child(3n + 4) {
-  margin-bottom: var(--min-indent);
-  margin-right: var(--min-indent);
-}
-
-.portfolio-list .listitem:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+.prtfolio-card-content {
+  padding: 20px 24px;
 }
 
 .portfolio-list .title {
-  margin-top: 20px;
-  padding: 0 24px;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -408,7 +403,6 @@ section Hero */
 }
 
 .portfolio-list .text {
-  padding: 0 24px;
   font-size: 16px;
   line-height: 1.88;
   text-transform: capitalize;
