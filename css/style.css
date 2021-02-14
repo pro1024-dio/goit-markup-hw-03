@@ -392,23 +392,10 @@ section Hero */
   margin-bottom: var(--min-indent);
   margin-right: var(--min-indent);
 }
+
 .portfolio-list .listitem:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-
-/* .portfolio .title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  text-transform: capitalize;
-}
-
-.portfolio .text {
-  font-size: 16px;
-  line-height: 1.88;
-  text-transform: capitalize;
-} */
 
 .portfolio-list .title {
   margin-top: 20px;
