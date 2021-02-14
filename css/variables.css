@@ -8,6 +8,9 @@
   --section-bgcolor: rgba(245, 244, 250, 1);
   --logoheader-second-color: rgba(0, 0, 0, 1);
   --logofooter-second-color: rgba(255, 255, 255, 1);
+  --border-cards-color: rgba(238, 238, 238, 1);
+  --width-container: 1200px;
+  --min-indent: 30px;
 }
 
 /* 
