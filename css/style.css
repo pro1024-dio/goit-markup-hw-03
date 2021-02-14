@@ -383,7 +383,7 @@ section Hero */
 }
 
 .portfolio-list .listitem {
-  flex-basis: calc(100% / 4 - var(--min-indent));
+  flex-basis: calc(100% / 3 - var(--min-indent));
   margin-top: var(--min-indent);
   margin-left: var(--min-indent);
   box-shadow: var(--card-shadow);
